@@ -16,7 +16,7 @@ function ProductListing({search}) {
 
 
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products')
+        axios.get('https://fakestoreapi.com/products') 
         .then((res) => setList(res.data))
         .catch((err) => console.log(err))
     },[])
@@ -61,7 +61,7 @@ function ProductListing({search}) {
                     <img src={prod.image} alt='imagephoto' />
                     </Link>
 
-                    <h3>{prod.title} </h3>
+                    <h3 id='ptitle'>{prod.title} </h3>
                     <div className='price'>Price: ${prod.price} </div>
 
                     <div className='cartButton'>

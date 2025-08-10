@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ProductListing from "./components/productlsting/ProductListing";
 import About from './components/productlsting/About';
 import Contact from './components/productlsting/Contact';
-import Footer from './components/productlsting/Footer';
+// import Footer from './components/productlsting/Footer';
 import Product from './components/productlsting/Product';
 import Navigation from './components/productlsting/Navigation';
 import ScrollToTop from './components/productlsting/ScrollToTop';
@@ -27,7 +27,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </Router>
       {/* <Home/> */}
     </div>

@@ -1,12 +1,12 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from  'react-router-dom'
-
+import './prodlist.css'
 import {useDispatch} from 'react-redux'
 import {addToCart} from '../productlsting/redux/CartSlice'
 
 function Product() {
-    const [list, setList] = useState('')
+    const [list, setList] = useState('') 
 
     const dispatch = useDispatch()
     console.log(dispatch)

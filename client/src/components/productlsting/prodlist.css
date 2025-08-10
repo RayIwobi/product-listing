@@ -8,18 +8,30 @@ body, html {
 .total-container{
   margin-bottom: 70px;
 }
-
+/* ///NAVIGATION */
 .topBar{
   background-color: gray;
-  width: 100vw;
+  width: 100%;
   height:40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 30px;
+  justify-content: space-evenly;
+  padding-left: 20px;
   position:fixed;
   top: 0;
   z-index:999;
+}
+@media screen and (max-width:600px){
+  .topBar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .searchspot{
+    display: none;
+  }
 }
 
 .topBar a{
@@ -61,7 +73,7 @@ body, html {
   width: 200px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-right: 60px;
 }
 
@@ -75,18 +87,23 @@ body, html {
   height: 400px;
   display: flex;
   justify-content: center;
-  margin-bottom:30px;
   margin-top: 30px;
 }
 .bannerimg img{
   width: 80vw;
 }
-
-/* .cika{
-  display: block;
-  margin: 0 auto;
-} */
-
+@media screen and (max-width: 600px){
+  .total-container{
+    overflow: hidden;
+  }
+  .bannerimg img{
+    width: 100%;
+    height: 200px;
+  }
+  .listing-title{
+    margin-top: -150px;
+  }
+}
 
 .prod-listing{
   max-width: 1300px;
@@ -103,6 +120,12 @@ body, html {
   margin: 10px;
   border-radius: 10px;
   padding:10px;
+}
+@media screen and (max-width:600px){
+  .prod-items{
+    width: 150px;
+  }
+  
 }
 
 .prod-items img{
@@ -123,6 +146,15 @@ body, html {
   overflow:hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@media screen and (max-width:600px){
+  #ptitle{
+    width: 150px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: black;
+  }
 }
 
 .listing-title{
@@ -167,8 +199,8 @@ body, html {
   background-color: gray;
   height: 60px;
   bottom: 0;
-  position: relative;
   width: 100vw;
+  position:sticky;
 }
 
 .footer-container{
@@ -184,10 +216,20 @@ body, html {
 }
 
 .product-details{
-  margin: 100px;
+  margin: 30px;
   margin-bottom: 250px;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width:600px){
+  .product-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #titles{
+    margin-top: 20px;
+  }
 }
 
 .product-details img{
